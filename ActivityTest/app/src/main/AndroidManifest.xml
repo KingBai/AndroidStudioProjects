@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".FirstActivity"
+            android:launchMode="singleTask"
             android:label="This is FirstActivitys">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondtActivity">
+        <activity android:name=".SecondtActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
 

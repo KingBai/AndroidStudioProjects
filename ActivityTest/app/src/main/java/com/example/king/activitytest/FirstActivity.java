@@ -18,6 +18,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+        Log.d(TAG, "Task id is "+getTaskId());
         Button button1 = (Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener(){
 
@@ -43,11 +44,13 @@ public class FirstActivity extends AppCompatActivity {
                 /**
                  * activity之间传值
                  */
-                String data = "Hi sencond";
+/*                String data = "Hi sencond";
                 Intent intent = new Intent(FirstActivity.this, SecondtActivity.class);
                 intent.putExtra("extra_data",data);
-                startActivityForResult(intent,1);
-                //startActivity(intent);
+                startActivityForResult(intent,1);*/
+                //测试singleTop//Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
+                Intent intent = new Intent(FirstActivity.this, SecondtActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -84,4 +87,9 @@ public class FirstActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: ");
+    }
 }

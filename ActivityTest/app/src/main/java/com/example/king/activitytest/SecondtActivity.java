@@ -14,6 +14,7 @@ public class SecondtActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "Task id is "+getTaskId());
         setContentView(R.layout.second_layout);
         final Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
@@ -22,10 +23,17 @@ public class SecondtActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent();
+                /**
+                 * 测试回调返回值
+                 */
+/*                Intent intent1 = new Intent();
                 intent1.putExtra("data_return","Hi First");
                 setResult(RESULT_OK,intent1);
-                finish();
+                finish();*/
+                //测试Activity SingleTask模式启动
+                // Intent intent1 = new Intent(SecondtActivity.this, FirstActivity.class);
+                Intent intent1 = new Intent(SecondtActivity.this, ThirdActivity.class);
+                startActivity(intent1);
             }
         });
     }
@@ -37,6 +45,12 @@ public class SecondtActivity extends AppCompatActivity {
         intent.putExtra("data_return","Hello FirstActivity");
         setResult(RESULT_OK,intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: ");
     }
 }
 
