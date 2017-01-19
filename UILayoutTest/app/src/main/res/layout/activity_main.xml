@@ -1,5 +1,5 @@
-<!--线性布局
 <?xml version="1.0" encoding="utf-8"?>
+<!--线性布局
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -146,6 +146,7 @@
         android:src="@mipmap/ic_launcher"/>
 
 </FrameLayout>-->
+<!--
 <android.support.percent.PercentFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -181,4 +182,15 @@
 
 
 
-</android.support.percent.PercentFrameLayout>
+</android.support.percent.PercentFrameLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<include layout="@layout/title" />-->
+
+    <com.example.uilayouttest.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
