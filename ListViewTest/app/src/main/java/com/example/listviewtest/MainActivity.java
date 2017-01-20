@@ -51,8 +51,44 @@ public class MainActivity extends AppCompatActivity {
 
     private void initFruits(){
         for (int i = 0; i < 2; i++) {
-            Fruit apple = new Fruit("",R.id.fruit_name);
-            fruitList.add(apple);
+            Fruit blackverry = new Fruit("Blackverry",R.drawable.blackberry);
+            fruitList.add(blackverry);
+
+            Fruit cherry = new Fruit("Cherry",R.drawable.cherry);
+            fruitList.add(cherry);
+
+            Fruit chestnuts = new Fruit("Chestnuts",R.drawable.chestnuts);
+            fruitList.add(chestnuts);
+
+            Fruit coconut = new Fruit("Coconut",R.drawable.coconut);
+            fruitList.add(coconut);
+
+            Fruit grape = new Fruit("Grape",R.drawable.grape);
+            fruitList.add(grape);
+
+            Fruit orange = new Fruit("Orange",R.drawable.orange);
+            fruitList.add(orange);
+
+            Fruit papaya = new Fruit("Papaya",R.drawable.papaya);
+            fruitList.add(papaya);
+
+            Fruit peach = new Fruit("Peach",R.drawable.peach);
+            fruitList.add(peach);
+
+            Fruit pear = new Fruit("Pear",R.drawable.pear);
+            fruitList.add(pear);
+
+            Fruit persimmon = new Fruit("Persimmon",R.drawable.persimmon);
+            fruitList.add(persimmon);
+
+            Fruit pomegranate = new Fruit("Pomegranate",R.drawable.pomegranate);
+            fruitList.add(pomegranate);
+
+            Fruit strawberry = new Fruit("Strawberry",R.drawable.strawberry);
+            fruitList.add(strawberry);
+
+            Fruit sugarapple = new Fruit("Sugarapple",R.drawable.sugarapple);
+            fruitList.add(sugarapple);
         }
     }
 
