@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //imageView = (ImageView) findViewById(R.id.image_view);
         progressBar = (ProgressBar) findViewById(R.id.process_bar);
         button.setOnClickListener(this);
+
+/*
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });*/
     }
 
     @Override
