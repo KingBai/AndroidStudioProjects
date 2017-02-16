@@ -2,13 +2,13 @@ package com.example.fragmentbestpractice;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class NewsContentActivity extends AppCompatActivity {
 
-    public static void actionStart(Context context,String newsTitle,String newsContent){
+
+    public static void actionStart(Context context, String newsTitle, String newsContent){
 
         Intent intent = new Intent(context, NewsContentActivity.class);
         intent.putExtra("news_title",newsTitle);
