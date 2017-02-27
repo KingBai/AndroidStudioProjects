@@ -33,15 +33,15 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("drop table if exists Book");
+        db.execSQL("drop table if exists Category");
         db.execSQL(CREATE_BOOK);
         db.execSQL(CREATE_CATEGORY);
-        Toast.makeText(mContext,"Create succeeded",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(mContext,"Create succeeded",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists Book");
-        db.execSQL("drop table if exists Category");
         onCreate(db);
     }
 }
